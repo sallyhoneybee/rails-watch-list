@@ -8,7 +8,7 @@ class ListsController < ApplicationController
   end
 
   def new
-    @movies = Movies.all
+    @movies = Movie.all
     @list = List.new
   end
 
