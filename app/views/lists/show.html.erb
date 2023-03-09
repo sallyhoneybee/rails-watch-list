@@ -1,9 +1,14 @@
+
+
+
 <h1><%= @list.name %></h1>
 
 <%= link_to "New Movie", new_list_bookmark_path(@list) %>
 
 <ul>
 <% @list.bookmarks.each do |bookmark|%>
+<li><img src=<%= "https://image.tmdb.org/t/p/w500/#{bookmark.movie.poster_url}" %> alt=""></li>
+<li><%= bookmark.movie.rating %> ⭐️</li>
 <li><%= bookmark.movie.title%></li>
 <li><%= bookmark.movie.overview%></li>
 <li><%= bookmark.comment %> <%= link_to "Delete",
