@@ -10,11 +10,11 @@
     <h1 class="p-4">My Lists</h1>
     <%= link_to "Add List", new_list_path, class: "btn bg-dark text-light" %>
   </div>
-    <% @images = ["https://inspirationfeed.com/wp-content/uploads/2018/12/ricardo-gomez-angel-176142-unsplash.jpg","https://inspirationfeed.com/wp-content/uploads/2018/12/matthew-henry-17725-unsplash.jpg","https://inspirationfeed.com/wp-content/uploads/2018/12/joel-jasmin-forestbird-506756-unsplash.jpg", "https://inspirationfeed.com/wp-content/uploads/2018/12/glen-carrie-544012-unsplash.jpg"] %>
+
   <div>
       <ul class="d-flex justify-content-start gap-3">
       <% @lists.each do |list| %>
-      <li class="card-category" style=<%= @images.sample %>><%= link_to list.name, list_path(list) %></li>
+      <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 250, crop: :fill %>')"><%= link_to list.name, list_path(list) %></li>
       <% end %>
       </ul>
   </div>
