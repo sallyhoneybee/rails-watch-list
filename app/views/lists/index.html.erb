@@ -1,7 +1,7 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.etsystatic.com/8279478/r/il/57e20f/3882248606/il_fullxfull.3882248606_4rkw.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://inspirationfeed.com/wp-content/uploads/2018/12/david-werbrouck-304966-unsplash.jpg);">
   <div class="container">
-    <h1> Save Only the Best <strong>Movies</strong> </h1>
-    <p>booom</p>
+    <h1> Shown Only the Best</h1>
+    <p>Save Only the Best</p>
   </div>
 </div>
 
@@ -10,10 +10,11 @@
     <h1 class="p-4">My Lists</h1>
     <%= link_to "Add List", new_list_path, class: "btn btn-warning" %>
   </div>
+    <% @images = ["https://inspirationfeed.com/wp-content/uploads/2018/12/ricardo-gomez-angel-176142-unsplash.jpg","https://inspirationfeed.com/wp-content/uploads/2018/12/matthew-henry-17725-unsplash.jpg","https://inspirationfeed.com/wp-content/uploads/2018/12/joel-jasmin-forestbird-506756-unsplash.jpg", "https://inspirationfeed.com/wp-content/uploads/2018/12/glen-carrie-544012-unsplash.jpg"] %>
   <div>
       <ul class="d-flex justify-content-start gap-3">
       <% @lists.each do |list| %>
-      <li class="card-category"><%= link_to list.name, list_path(list) %></li>
+      <li class="card-category" style=<%= @images.sample %>><%= link_to list.name, list_path(list) %></li>
       <% end %>
       </ul>
   </div>
