@@ -14,10 +14,11 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 0 10px;
+  transition: transform .4s;
 }
 
 .card-category:hover {
-
+  transform: scale(1.1);
 }
 
 .card-category a {
